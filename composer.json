@@ -1,0 +1,33 @@
+{
+    "name": "faiznurullah/portalpulsa",
+    "description": "package for connecting your php applications with portalpulsa",
+    "type": "package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Faiznurullah\\Portalpulsa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Faiz Nurullah"
+        }
+    ],
+    "require": { 
+        "guzzlehttp/guzzle": "^7.8", 
+        "illuminate/support": "^6|^7|^8|^9|^10|^11"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5" 
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Faiznurullah\\Portal\\PortalpulsaServiceProvider"
+          ],
+          "aliases": {
+            "Portalpulsa": "Faiznurullah\\Portal\\PortalpulsaFacade"
+          }
+        }
+      }
+}
